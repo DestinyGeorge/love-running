@@ -25,6 +25,9 @@ header{
     z-index: 99; /* remain above other elements*/
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a; /* adds shadow under nav. val1 = horizontal val 2 = verticl val 3=blur */
+    display: flex; /* make sure toggle is nex to logo*/
+    justify-content: space-between; /* create space bnetween logo and togggle*/
+    align-items: baseline;
 }
 
 header a{
@@ -51,6 +54,30 @@ h1{
 
 .active{
     border-bottom: 1px solid #3a3a3a;
+}
+
+/* Navbar styles with dropdown toddle */
+nav{
+    position: absolute;
+    background: #FFFFFF;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%; /* nav elements should start at the bottom (initial top +100%) of the parent element - the header*/
+}
+/* Nav toggle */
+#nav-toggle:checked~nav{
+    display: block;
+}
+
+#nav-toggle{
+    display: none; /*hide checkbox as clicling label clicks the box*/
+}
+
+.nav-toggle-label{ 
+    font-size: 2rem;
 }
 
 /* Main */
