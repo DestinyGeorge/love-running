@@ -93,3 +93,29 @@ footer{
     background-color: orange;
 
 }
+
+
+/* Media query: tablets and larger (768px and up*/
+@media  screen and (min-width: 768px) {
+    /*Header*/
+    nav{
+        display: block; /* show nav  (inplace of none)*/
+        position: relative; /* put nav back in header (in place of absolute) */
+        box-shadow: none;
+        width: fit-content; /*no longer takes full width > flex can position them on the right */
+        padding-right: 1rem;
+    }
+    
+    #menu{
+        display: flex; /* puts nav bar items in row*/
+    }
+
+    #menu > li{
+        padding-left: 1rem; /* gives each item a gap*/
+    }
+
+    .nav-toggle-label{
+        display: none;
+    }
+
+}
